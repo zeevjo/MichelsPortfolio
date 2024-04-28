@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useEffect } from "react";
+import "./App.css";
+import { Container } from "./components";
+import { sectionsData } from "./constants";
+import { SectionData } from "interfaces";
+import { useCoolScroll } from "hooks";
 
-function App() {
+const App: React.FC = () => {
+  const container1Ref = useRef<HTMLDivElement>(null);
+  const container2Ref = useRef<HTMLDivElement>(null);
+
+  useCoolScroll(container1Ref, container2Ref);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container
+        sections={sectionsData}
+        containerRef={container1Ref}
+      ></Container>
+      <Container
+        sections={sectionsData}
+        containerRef={container2Ref}
+      ></Container>
     </div>
   );
-}
+};
 
 export default App;

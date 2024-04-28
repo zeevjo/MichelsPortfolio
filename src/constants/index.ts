@@ -1,0 +1,1 @@
+export { sectionsData } from "./sectionsData";

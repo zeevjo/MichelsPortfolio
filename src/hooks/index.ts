@@ -1,0 +1,1 @@
+export { default as useCoolScroll } from "./UseCoolScroll";
