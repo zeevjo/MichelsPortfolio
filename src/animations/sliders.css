@@ -1,0 +1,22 @@
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%); /* Start from off-screen top */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%); /* Slide down to original position */
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideDwon {
+  0% {
+    transform: translateY(100%); /* Start from off-screen top */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%); /* Slide down to original position */
+    opacity: 1;
+  }
+}

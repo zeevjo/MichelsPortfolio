@@ -2,7 +2,6 @@ import {
   Dispatch,
   ReactNode,
   RefObject,
-  SetStateAction,
   createContext,
   useState,
 } from "react";
