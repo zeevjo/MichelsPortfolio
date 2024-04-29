@@ -1,1 +1,7 @@
-/*# sourceMappingURL=container.css.map */
+.container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  width: 50vw;
+  scrollbar-width: none;
+}/*# sourceMappingURL=container.css.map */

@@ -1,1 +1,1 @@
-export { sectionsData } from "./sectionsData";
+export { sectionsDataOne, sectionsDataTwo } from "./sectionsData";

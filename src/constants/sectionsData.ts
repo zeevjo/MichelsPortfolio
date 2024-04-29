@@ -1,9 +1,23 @@
+import {
+  MichelleAboutPicture,
+  MichelleProfilePicture,
+  MicheleClientsPicture,
+  MichelleContactPicture,
+} from "assets";
 import { SectionData } from "interfaces";
 
-export const sectionsData: SectionData[] = [
-  { backgroundColor: "#fa88eb", text: "Page container 1" },
-  { backgroundColor: "#0011ff", text: "Page container 2" },
-  { backgroundColor: "#00ff15", text: "Page container 3" },
-  { backgroundColor: "#ffe600", text: "Page container 4" },
-  // { backgroundColor: "#fcba03", text: "Page container 5" },
+const sectionsDataOne: SectionData[] = [
+  { imgUrl: "", text: "Page container-1 1" },
+  { imgUrl: MichelleAboutPicture, text: "Page container-1 2" },
+  { imgUrl: "", text: "Page container-1 3" },
+  { imgUrl: MichelleContactPicture, text: "Page container-1 4" },
 ];
+
+const sectionsDataTwo: SectionData[] = [
+  { imgUrl: "", text: "Page container-2 1" },
+  { imgUrl: MicheleClientsPicture, text: "Page container-2 2" },
+  { imgUrl: "", text: "Page container-2 3" },
+  { imgUrl: MichelleProfilePicture, text: "Page container-2 4" },
+];
+
+export { sectionsDataOne, sectionsDataTwo };

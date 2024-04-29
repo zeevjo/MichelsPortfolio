@@ -1,4 +1,4 @@
 export interface SectionProps {
-  backgroundColor: string;
+  backgroundImage: string;
   text: string;
 }

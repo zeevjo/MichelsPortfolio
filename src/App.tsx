@@ -1,28 +1,38 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import "./App.css";
 import { Container } from "./components";
-import { sectionsData } from "./constants";
+import { sectionsDataOne, sectionsDataTwo } from "./constants";
 import { SectionData } from "interfaces";
 import { useCoolScroll } from "hooks";
+import { MichelleProfilePicture } from "assets";
+import { storeContext } from "Context";
 
 const App: React.FC = () => {
-  const container1Ref = useRef<HTMLDivElement>(null);
-  const container2Ref = useRef<HTMLDivElement>(null);
+  const {setRightContainer, setLeftContainer} = useContext(storeContext);
+  const rightContainer = useRef<HTMLDivElement>(null);
+  const leftContainer = useRef<HTMLDivElement>(null);
 
-  useCoolScroll(container1Ref, container2Ref);
+  useEffect(() => {
+    setRightContainer(rightContainer);
+    setLeftContainer(leftContainer);
+  }, [])
 
+  useCoolScroll(rightContainer, leftContainer);
   return (
     <div className="App">
       <Container
-        sections={sectionsData}
-        containerRef={container1Ref}
+        sections={sectionsDataOne}
+        containerRef={rightContainer}
       ></Container>
       <Container
-        sections={sectionsData}
-        containerRef={container2Ref}
+        sections={sectionsDataTwo}
+        containerRef={leftContainer}
       ></Container>
     </div>
   );
 };
 
 export default App;
+
+
+

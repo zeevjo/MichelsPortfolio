@@ -1,4 +1,4 @@
 export interface SectionData {
-  backgroundColor: string;
+  imgUrl: string;
   text: string;
 }

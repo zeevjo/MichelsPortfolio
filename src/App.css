@@ -9,15 +9,15 @@ body {
   flex-direction: row;
 }
 
-.container {
+/* .container {
   height: 100vh;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   width: 50vw;
   scrollbar-width: none;
-}
+} */
 
-section {
+/* section {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,4 +25,4 @@ section {
   align-items: center;
   text-align: center;
   scroll-snap-align: start;
-}
+} */

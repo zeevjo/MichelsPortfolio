@@ -1,15 +1,15 @@
 import { Section } from "components";
 import { ContainerProps } from "interfaces";
+import './container.css'
 
 const Container: React.FC<ContainerProps> = ({ sections, containerRef }) => {
-  console.log("sections", sections);
-  
+
   return (
     <div className="container" ref={containerRef}>
       {sections.map((section, index) => (
         <Section
           key={index}
-          backgroundColor={section.backgroundColor}
+          backgroundImage={section.imgUrl}  // Update prop name
           text={section.text}
         />
       ))}
@@ -18,3 +18,4 @@ const Container: React.FC<ContainerProps> = ({ sections, containerRef }) => {
 };
 
 export default Container;
+
